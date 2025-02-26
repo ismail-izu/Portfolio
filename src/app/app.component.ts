@@ -14,11 +14,11 @@ import { ContactComponent } from "./contact/contact.component";
   imports: [NavBarComponent, FooterComponent, HomeComponent, SkillsComponent, AboutComponent, ContactComponent]
 })
 export class AppComponent implements AfterViewInit {
-  constructor(private router: Router, private activatedRoute:ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     // this.navigateToHome();
   }
   ngAfterViewInit() {
-    this.activatedRoute.fragment.subscribe(fragment=>{
+    this.activatedRoute.fragment.subscribe(fragment => {
       this.scrollToFragment(fragment);
       // if(fragment){
       //   const element = document.getElementById(fragment);
@@ -28,8 +28,8 @@ export class AppComponent implements AfterViewInit {
       // }
     });
   }
-  @HostListener('document:click',['$event'])
-  onDocumentClick(event:Event){
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
     const target = event.target as HTMLElement;
     if (target.tagName === 'A' && target.hasAttribute('routerLink')) {
       const fragment = target.getAttribute('fragment');
@@ -37,14 +37,14 @@ export class AppComponent implements AfterViewInit {
         this.scrollToFragment(fragment);
       }
     }
-    
+
   }
 
-scrollToFragment(fragment:string|null){
-  if(fragment){
-    document.getElementById(fragment)?.scrollIntoView({behavior:'smooth'});
+  scrollToFragment(fragment: string | null) {
+    if (fragment) {
+      document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' });
+    }
   }
-}
 
   navigateToHome() {
     this.router.navigate(['/home']);
