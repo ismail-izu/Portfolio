@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import { AfterViewInit, Component } from '@angular/core';
+import { ActivatedRoute, Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -13,9 +13,19 @@ import { ContactComponent } from "./contact/contact.component";
   styleUrl: './app.component.scss',
   imports: [NavBarComponent, FooterComponent, HomeComponent, SkillsComponent, AboutComponent, ContactComponent]
 })
-export class AppComponent {
-  constructor(private router: Router) {
-    this.navigateToHome();
+export class AppComponent implements AfterViewInit {
+  constructor(private router: Router, private activatedRoute:ActivatedRoute) {
+    // this.navigateToHome();
+  }
+  ngAfterViewInit() {
+    this.activatedRoute.fragment.subscribe(fragment=>{
+      if(fragment){
+        const element = document.getElementById(fragment);
+        if(element){
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
   }
   navigateToHome() {
     this.router.navigate(['/home']);
