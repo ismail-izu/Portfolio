@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -27,6 +27,17 @@ export class AppComponent implements AfterViewInit {
       //   }
       // }
     });
+  }
+  @HostListener('document:click',['$event'])
+  onDocumentClick(event:Event){
+    const target = event.target as HTMLElement;
+    if (target.tagName === 'A' && target.hasAttribute('routerLink')) {
+      const fragment = target.getAttribute('fragment');
+      if (fragment) {
+        this.scrollToFragment(fragment);
+      }
+    }
+    
   }
 
 scrollToFragment(fragment:string|null){
