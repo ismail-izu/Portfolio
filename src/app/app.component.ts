@@ -20,12 +20,6 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.activatedRoute.fragment.subscribe(fragment => {
       this.scrollToFragment(fragment);
-      // if(fragment){
-      //   const element = document.getElementById(fragment);
-      //   if(element){
-      //     element.scrollIntoView({ behavior: 'smooth' });
-      //   }
-      // }
     });
   }
   @HostListener('document:click', ['$event'])
