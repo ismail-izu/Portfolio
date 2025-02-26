@@ -19,14 +19,22 @@ export class AppComponent implements AfterViewInit {
   }
   ngAfterViewInit() {
     this.activatedRoute.fragment.subscribe(fragment=>{
-      if(fragment){
-        const element = document.getElementById(fragment);
-        if(element){
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
+      this.scrollToFragment(fragment);
+      // if(fragment){
+      //   const element = document.getElementById(fragment);
+      //   if(element){
+      //     element.scrollIntoView({ behavior: 'smooth' });
+      //   }
+      // }
     });
   }
+
+scrollToFragment(fragment:string|null){
+  if(fragment){
+    document.getElementById(fragment)?.scrollIntoView({behavior:'smooth'});
+  }
+}
+
   navigateToHome() {
     this.router.navigate(['/home']);
   }
