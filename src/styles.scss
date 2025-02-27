@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+// Light Theme Variables
+$background-color: #F5F5F7; // Soft grey, near white
+$text-color: #333333; // Dark grey for contrast
+$card-background: #ffffff; // Pure white cards
+$border-color: rgba(0, 0, 0, 0.1);
+$hover-effect: rgba(0, 0, 0, 0.05);
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: "DM Sans", sans-serif;
+
+}
+
+// Card Styling (For containers, sections, etc.)
+.card {
+  background: $card-background;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border: 1px solid $border-color;
+}
+
+// Buttons
+.button {
+  background: $text-color;
+  color: $card-background;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: lighten($text-color, 10%);
+    box-shadow: 0px 5px 15px $hover-effect;
+  }
+}
+
+// Links
+a {
+  color: $text-color;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: lighten($text-color, 20%);
+  }
+}
+
+// Navbar & Footer Styling
+// .navbar, .footer {
+//   background-color: rgba(255, 255, 255, 0.7);
+//   backdrop-filter: blur(10px);
+//   border-bottom: 1px solid $border-color;
+// }
