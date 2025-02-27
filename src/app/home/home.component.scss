@@ -1,0 +1,60 @@
+// Font Variables
+// $font-family: "Poppins", sans-serif;
+$primary-color: #000; // Black for bold text
+$secondary-color: #555; // Dark gray for subtitle
+$hover-color: #000; // Black hover effect
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+//   font-family: $font-family;
+
+  h1 {
+    font-size: 6rem; // Extra large
+    font-weight: 900; // Extra bold
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $secondary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    a {
+      font-size: 1.5rem;
+      color: $primary-color;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .resume {
+    background: $primary-color;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}
