@@ -43,29 +43,37 @@ $hover-color: #000; // Black hover effect
     }
   }
 
- .resume {
-  background: $primary-color;
-  color: white;
-  font-size: 1.2rem;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  font-weight: 600;
+  .resume {
+    background: #000000;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    font-weight: 450;
   
-  &:hover {
-    background: darken($primary-color, 10%);
-    transform: translateY(-3px); // Lifts button slightly
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Glow effect
+    &:hover {
+      background: darken(#000000, 10%);
+      transform: translateY(-3px); // Lifts button slightly
+  
+      // Apply the gradient shadow effect
+      box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5), 
+                  0 -5px 20px rgba(46, 49, 146, 0.5);
+  
+      // Adding a subtle glow effect
+      filter: brightness(1.2);
+    }
+  
+    &:active {
+      transform: translateY(1px); // Pressed effect
+      box-shadow: 0 3px 10px rgba(27, 255, 255, 0.3),
+                  0 -3px 10px rgba(46, 49, 146, 0.3);
+    }
   }
-
-  &:active {
-    transform: translateY(1px); // Pressed effect
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  }
-}
+  
 
 }
