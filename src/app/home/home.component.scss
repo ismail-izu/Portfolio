@@ -21,7 +21,7 @@ $hover-color: #000; // Black hover effect
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: $secondary-color;
     margin-bottom: 1.5rem;
@@ -43,18 +43,29 @@ $hover-color: #000; // Black hover effect
     }
   }
 
-  .resume {
-    background: $primary-color;
-    color: white;
-    font-size: 1.2rem;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background: darken($primary-color, 10%);
-    }
+ .resume {
+  background: $primary-color;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  
+  &:hover {
+    background: darken($primary-color, 10%);
+    transform: translateY(-3px); // Lifts button slightly
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Glow effect
   }
+
+  &:active {
+    transform: translateY(1px); // Pressed effect
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
 }
