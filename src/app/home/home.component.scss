@@ -31,6 +31,7 @@ $hover-color: #000; // Black hover effect
     display: flex;
     gap: 1.5rem;
     margin-bottom: 2rem;
+    align-items: center; 
 
     a {
       font-size: 1.5rem;
@@ -38,8 +39,15 @@ $hover-color: #000; // Black hover effect
       transition: transform 0.3s ease-in-out;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
+
+    img{
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        aspect-ratio: 1;
+    }
     }
   }
 
