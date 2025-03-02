@@ -1,6 +1,47 @@
 .about {
+    /* Full-width black background */
+
     left: 0;
-    position: absolute;
+    // position: absolute;
     background-color: black;
     width: 100%;
-}
+    // z-index: -1;
+    min-height: 100vh; 
+    // background-color: #121212;
+    /* Make text white for contrast */
+    color: #ffffff;
+    /* Add top/bottom and side spacing */
+    padding: 100px 20px;
+    /* Optional: make it span full viewport height */
+    min-height: 100vh;
+  
+    /* Center the heading horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    h1 {
+      /* Center text within itself (if needed) */
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+  
+    .about-content {
+      /* Constrain the width so paragraphs aren’t too wide */
+      max-width: 800px;
+      /* Center the container horizontally */
+      margin: 0 auto;
+      /* Left-align the text within the container */
+      text-align: left;
+      /* Spacing between lines for readability */
+      line-height: 1.6;
+      font-size: 1.1rem;
+  
+      p {
+        margin-bottom: 20px; /* Space between paragraphs */
+      }
+    }
+  }
+  
