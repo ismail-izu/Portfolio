@@ -1,47 +1,40 @@
 .about {
-    /* Full-width black background */
-
-    left: 0;
-    // position: absolute;
-    background-color: black;
-    width: 100%;
-    // z-index: -1;
-    min-height: 100vh; 
-    // background-color: #121212;
-    /* Make text white for contrast */
-    color: #ffffff;
-    /* Add top/bottom and side spacing */
-    padding: 100px 20px;
-    /* Optional: make it span full viewport height */
-    min-height: 100vh;
+    /* Center everything horizontally */
+    text-align: center;
+    /* Background color for the whole section (optional) */
+    background-color: #18181B;
+    /* Spacing around the section */
+    padding: 50px 20px;
+    color: #CBD5E1;
+    height: 100vh;
+  }
   
-    /* Center the heading horizontally */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .about h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-top: 10rem;
+  }
   
-    h1 {
-      /* Center text within itself (if needed) */
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 30px;
-    }
+  .about-box {
+    /* Center the box itself */
+    margin: 0 auto;
+    /* Restrict the maximum width of the box */
+    max-width: 750px;
+    /* If you want a fixed width (more “boxy”), use width: 600px */
+    
+    /* Give it a background, border, or box-shadow so it looks like a “box” */
+    background-color: #18181B;
+    border-radius: 8px;
+    padding: 30px;
+    // box-shadow: 0 4px 10px rgba(243, 1, 1, 0.1);
+    
+    /* Left-align the text inside the box */
+    text-align: left;
+  }
   
-    .about-content {
-      /* Constrain the width so paragraphs aren’t too wide */
-      max-width: 800px;
-      /* Center the container horizontally */
-      margin: 0 auto;
-      /* Left-align the text within the container */
-      text-align: left;
-      /* Spacing between lines for readability */
-      line-height: 1.6;
-      font-size: 1.1rem;
-  
-      p {
-        margin-bottom: 20px; /* Space between paragraphs */
-      }
-    }
+  .about-box p {
+    margin-bottom: 20px;
+    line-height: 1.6;
   }
   
