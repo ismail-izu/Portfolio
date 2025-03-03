@@ -5,6 +5,13 @@ $card-background: #ffffff; // Pure white cards
 $border-color: rgba(0, 0, 0, 0.1);
 $hover-effect: rgba(0, 0, 0, 0.05);
 
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
 body {
   background-color: $background-color;
   color: $text-color;
