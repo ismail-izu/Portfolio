@@ -1,0 +1,41 @@
+.skills {
+    background-color: #18181B;
+    padding: 2rem;
+    color: #fff;
+    height: 100vh;
+  
+    h1 {
+      text-align: center;
+      margin-bottom: 8rem;
+      font-size: 2.5rem;
+      margin-top: 10rem;
+    }
+  
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;        // space between the cards
+      flex-wrap: wrap;  // allows cards to wrap on smaller screens
+    }
+  
+    .card {
+      background-color: #242427;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      flex: 1 1 calc(50% - 2rem);  // use a fixed base width for card
+      max-width: calc(45% - 2rem); // restrict card width to force wrapping
+    }
+  
+    h4 {
+      margin-bottom: 3rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  
+    p {
+      color: #e2e2e29f;
+      font-weight: 400;   // standard weight for cleaner text
+      line-height: 1.6;   // improved readability
+    }
+  }
