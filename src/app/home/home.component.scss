@@ -1,0 +1,89 @@
+// Font Variables
+// $font-family: "Poppins", sans-serif;
+$primary-color: #000; // Black for bold text
+$secondary-color: #555; // Dark gray for subtitle
+$hover-color: #000; // Black hover effect
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+  margin-bottom: 10rem;
+//   font-family: $font-family;
+
+  h1 {
+    font-size: 5.5rem; // Extra large
+    font-weight: 900; // Extra bold
+    color: $primary-color;
+    margin-bottom: 0.1rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $secondary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center; 
+
+    a {
+      font-size: 1.5rem;
+      color: $primary-color;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+    img{
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        aspect-ratio: 1;
+    }
+    }
+  }
+
+  .resume {
+    background: #18181B;
+    color: white;
+    font-size: 1rem;
+    padding: 15px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: -10px;
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+    // position: relative;
+    overflow: hidden;
+    // font-weight: 450;
+  
+    &:hover {
+      background: darken(#000000, 10%);
+      transform: translateY(-3px); // Lifts button slightly
+  
+      // Apply the gradient shadow effect
+      box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5), 
+                  0 -5px 20px rgba(46, 49, 146, 0.5);
+  
+      // Adding a subtle glow effect
+      filter: brightness(1.2);
+    }
+  
+    &:active {
+      transform: translateY(1px); // Pressed effect
+      box-shadow: 0 3px 10px rgba(27, 255, 255, 0.3),
+                  0 -3px 10px rgba(46, 49, 146, 0.3);
+    }
+  }
+  
+
+}
