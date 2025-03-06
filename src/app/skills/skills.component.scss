@@ -111,4 +111,15 @@
         margin-bottom: 1rem;
         color: #d1d1d1;
     }
+    &:hover {
+        // background: darken(#000000, 10%);
+        // transform: translateY(-3px); // Lifts button slightly
+    
+        // Apply the gradient shadow effect
+        box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5), 
+                    0 -5px 20px rgba(46, 49, 146, 0.5);
+    
+        // Adding a subtle glow effect
+        filter: brightness(1.2);
+      }
 }
