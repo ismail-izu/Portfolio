@@ -1,11 +1,14 @@
 // Define color variables
 $primary-color: #ffffff;
-$background-color: #333333; // More transparency for glass effect
+$background-color:#333333a8; // More transparency for glass effect
 $hover-color: #1BFFFF;
 $gradient-hover: linear-gradient(90deg,#1BFFFF,#2E3192);
 $font-family: "Poppins", sans-serif;
 
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: $background-color;
   padding: 1.5rem 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -13,8 +16,16 @@ $font-family: "Poppins", sans-serif;
   width: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: blur(20px); // Enhanced glass effect
+  backdrop-filter: blur(10px); // Enhanced glass effect
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  // Style for the new logo/anchor tag
+  .navbar-logo {
+    font-family: $font-family;
+    font-size: 1.5rem;
+    // font-weight: bold;
+    color: $primary-color;
+  }
 
   ul {
     list-style: none;
@@ -69,8 +80,9 @@ $font-family: "Poppins", sans-serif;
 // Responsive design
 @media (max-width: 768px) {
   .navbar {
+    flex-direction: column;
     padding: 1rem;
-    
+
     ul {
       flex-direction: column;
       text-align: center;
