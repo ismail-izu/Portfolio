@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .underline-text {
     text-decoration: underline;
 }
@@ -46,7 +48,7 @@
     // font-weight: 450;
 
     &:hover {
-        background: darken(#000000, 10%);
+        background: color.scale(#000000, $lightness: -10%);
         transform: translateY(-3px); // Lifts button slightly
 
         // Apply the gradient shadow effect

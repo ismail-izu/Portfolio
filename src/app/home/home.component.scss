@@ -3,6 +3,7 @@
 $primary-color: #000; // Black for bold text
 $secondary-color: #555; // Dark gray for subtitle
 $hover-color: #000; // Black hover effect
+@use "sass:color";
 
 .home {
   display: flex;
@@ -67,7 +68,7 @@ $hover-color: #000; // Black hover effect
     // font-weight: 450;
   
     &:hover {
-      background: darken(#000000, 10%);
+      background: color.scale(#000000, $lightness: -10%);
       transform: translateY(-3px); // Lifts button slightly
   
       // Apply the gradient shadow effect
