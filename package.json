@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:major": "npm version major --no-git-tag-version && ng build --configuration production",
+    "build:minor": "npm version minor --no-git-tag-version && ng build --configuration production",
+    "build:patch": "npm version patch --no-git-tag-version && ng build --configuration production"
   },
   "private": true,
   "dependencies": {
