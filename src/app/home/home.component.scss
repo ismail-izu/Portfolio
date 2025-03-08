@@ -74,9 +74,9 @@ $hover-color: #000; // Black hover effect
       transform: translateY(-3px); // Lifts button slightly
   
       // Apply the gradient shadow effect
-      box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5), 
-                  0 -5px 20px rgba(46, 49, 146, 0.5);
-  
+      // box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5), 
+      //             0 -5px 20px rgba(46, 49, 146, 0.5);
+      animation: glow 2s ease-in-out infinite;
       // Adding a subtle glow effect
       filter: brightness(1.2);
     }
@@ -85,6 +85,16 @@ $hover-color: #000; // Black hover effect
       transform: translateY(1px); // Pressed effect
       box-shadow: 0 3px 10px rgba(27, 255, 255, 0.3),
                   0 -3px 10px rgba(46, 49, 146, 0.3);
+    }
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5),
+                    0 -5px 20px rgba(46, 49, 146, 0.5);
+      }
+      50% {
+        box-shadow: 0 5px 20px rgba(27, 255, 255, 1),
+                    0 -5px 20px rgba(46, 49, 146, 1);
+      }
     }
   }
   

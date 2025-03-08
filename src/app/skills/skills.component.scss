@@ -116,10 +116,21 @@
         // transform: translateY(-3px); // Lifts button slightly
     
         // Apply the gradient shadow effect
-        box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5), 
-                    0 -5px 20px rgba(46, 49, 146, 0.5);
+        animation: glow 2s ease-in-out infinite;
+        // box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5), 
+        //             0 -5px 20px rgba(46, 49, 146, 0.5);
     
         // Adding a subtle glow effect
         filter: brightness(1.2);
+      }
+      @keyframes glow {
+        0%, 100% {
+          box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5),
+                      0 -5px 20px rgba(46, 49, 146, 0.5);
+        }
+        50% {
+          box-shadow: 0 5px 20px rgba(27, 255, 255, 1),
+                      0 -5px 20px rgba(46, 49, 146, 1);
+        }
       }
 }
