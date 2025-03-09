@@ -1,9 +1,6 @@
 .about {
-  /* Center everything horizontally */
   text-align: center;
-  /* Background color for the whole section */
   background-color: #18181B;
-  /* Spacing around the section */
   padding: 50px 20px;
   color: #CBD5E1;
   height: 80vh;
@@ -17,14 +14,11 @@
 }
 
 .about-box {
-  /* Center the box */
   margin: 0 auto;
-  /* Maximum width for readability */
   max-width: 750px;
   background-color: #18181B;
   border-radius: 8px;
   padding: 30px;
-  /* Left-align text inside the box */
   text-align: left;
 }
 
@@ -38,21 +32,21 @@
 @media (max-width: 768px) {
   .about {
     padding: 30px 10px;
-    height: auto; /* Allow the height to adjust based on content */
+    height: auto;
   }
 
   .about h1 {
-    font-size: 2rem; /* Scale down the heading */
-    margin-top: 4rem; /* Reduce top margin */
+    font-size: 2rem;
+    margin-top: 4rem;
   }
 
   .about-box {
-    padding: 20px; /* Reduce padding inside the box */
-    max-width: 100%; /* Allow full width on small screens */
+    padding: 20px;
+    max-width: 100%;
   }
 
   .about-box p {
-    font-size: 0.9rem; /* Slightly smaller font size for paragraphs */
-    margin-bottom: 15px; /* Adjust spacing between paragraphs */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
   }
 }
