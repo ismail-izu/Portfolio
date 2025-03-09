@@ -1,8 +1,8 @@
 // Define color variables
 $primary-color: #ffffff;
-$background-color:#333333a8; // More transparency for glass effect
+$background-color: #333333a8;
 $hover-color: #1BFFFF;
-$gradient-hover: linear-gradient(90deg,#1BFFFF,#2E3192);
+$gradient-hover: linear-gradient(90deg, #1BFFFF, #2E3192);
 $font-family: "Poppins", sans-serif;
 
 .navbar {
@@ -16,16 +16,37 @@ $font-family: "Poppins", sans-serif;
   width: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: blur(10px); // Enhanced glass effect
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1;
 
-  // Style for the new logo/anchor tag
   .navbar-logo {
     font-family: $font-family;
     font-size: 1.5rem;
-    // font-weight: bold;
     color: $primary-color;
+  }
+
+  // Hamburger menu toggle (default hidden on desktop)
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+
+    .bar {
+      height: 3px;
+      background-color: $primary-color;
+      transition: all 0.3s ease;
+    }
   }
 
   ul {
@@ -37,7 +58,6 @@ $font-family: "Poppins", sans-serif;
     margin: 0;
 
     li {
-      display: inline-block;
       position: relative;
 
       a {
@@ -52,12 +72,11 @@ $font-family: "Poppins", sans-serif;
 
         &:hover {
           color: $hover-color;
-          letter-spacing: 1px; // Expands text slightly
-          text-shadow: 0px 0px 10px rgba(0, 242, 255, 0.8); // Neon glow
-          transform: translateY(-3px); // Floating effect
+          letter-spacing: 1px;
+          text-shadow: 0px 0px 10px rgba(0, 242, 255, 0.8);
+          transform: translateY(-3px);
         }
 
-        // Dynamic gradient underline
         &::after {
           content: "";
           position: absolute;
@@ -78,16 +97,48 @@ $font-family: "Poppins", sans-serif;
   }
 }
 
-// Responsive design
+// Responsive design for mobile screens
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+
+    .menu-toggle {
+      display: block;
+    }
 
     ul {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 280px;
+      height: 100vh;
+      margin-top: 4.4rem;
+      background-color: $background-color;
+      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
       flex-direction: column;
-      text-align: center;
-      gap: 1rem;
+      align-items: center;
+      gap: 1.5rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    ul.open {
+      right: 0;
+    }
+  }
+
+  .menu-icon.open {
+    .bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
     }
   }
 }
