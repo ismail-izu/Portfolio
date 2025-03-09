@@ -11,11 +11,10 @@
     width: 100%;
   }
 
-  /* New container for built text and icons, placed above the hr */
+  /* Container for built text and icons */
   .built-info {
     width: 100%;
     max-width: 1200px;
-    // padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,10 +50,10 @@
     }
   }
 
-  // Style for the horizontal line
+  /* Horizontal rule styling */
   .ruler {
     border-color: #e2e2e29f;
-    width: calc(100% - 4rem); // adjust width relative to padding
+    width: calc(100% - 4rem); // Adjust width relative to padding
     max-width: 1200px;
     margin: 1rem 0;
     align-self: center;
@@ -77,9 +76,52 @@
       .angular-logo {
         width: 17px;
         height: 17px;
-        vertical-align: middle; /* aligns the logo with the text */
+        vertical-align: middle; /* Aligns the logo with the text */
         margin: 0 0.2rem;
       }
+    }
+  }
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem;
+
+    footer {
+      flex-direction: column;
+    }
+
+    .built-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .links {
+      gap: 1rem;
+
+      a {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+
+    .ruler {
+      width: 100%; // Expand the rule width on mobile
+      margin: 1rem auto;
+    }
+
+    .made-with {
+      font-size: 0.75rem;
+      padding-bottom: 0.5rem;
     }
   }
 }
