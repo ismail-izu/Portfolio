@@ -49,11 +49,11 @@
 
 .work-card {
     /* Card Container */
-    background-color: #242427; // Dark background
+    background-color: #18181B; // Dark background
     color: #fff; // White text
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     flex: 1 1 calc(50% - 2rem); // use a fixed base width for card
     max-width: calc(45% - 2rem); // restrict card width to force wrapping
 
@@ -112,6 +112,7 @@
         color: #d1d1d1;
     }
     &:hover {
+        // background-color: #242427;
         // background: darken(#000000, 10%);
         // transform: translateY(-3px); // Lifts button slightly
     
