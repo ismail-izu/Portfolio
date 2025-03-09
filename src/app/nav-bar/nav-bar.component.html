@@ -1,10 +1,20 @@
 <nav class="navbar">
   <a href="https://ismailportfolio-beta.vercel.app" class="navbar-logo">MI</a>
-    <ul>
-      <!-- <li><a routerLink="/" fragment="home">Home</a></li> -->
-      <li><a routerLink="/" fragment="about">About</a></li>
-      <li><a routerLink="/" fragment="skills">Skills</a></li>
-      <li><a routerLink="/" fragment="contact">Contact</a></li>
-    </ul>
-  </nav>
-  
+
+  <!-- Hamburger toggle button -->
+  <button class="menu-toggle" aria-label="Toggle Navigation" (click)="isMenuOpen = !isMenuOpen">
+    <span class="menu-icon" [ngClass]="{'open': isMenuOpen}">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </span>
+  </button>
+
+  <!-- Navigation Drawer -->
+  <ul [class.open]="isMenuOpen">
+    <!-- <li><a routerLink="/" fragment="home">Home</a></li> -->
+    <li><a routerLink="/" fragment="about">About</a></li>
+    <li><a routerLink="/" fragment="skills">Skills</a></li>
+    <li><a routerLink="/" fragment="contact">Contact</a></li>
+  </ul>
+</nav>
