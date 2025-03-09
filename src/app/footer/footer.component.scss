@@ -11,7 +11,6 @@
     width: 100%;
   }
 
-  /* Container for built text and icons */
   .built-info {
     width: 100%;
     max-width: 1200px;
@@ -50,10 +49,9 @@
     }
   }
 
-  /* Horizontal rule styling */
   .ruler {
     border-color: #e2e2e29f;
-    width: calc(100% - 4rem); // Adjust width relative to padding
+    width: calc(100% - 4rem);
     max-width: 1200px;
     margin: 1rem 0;
     align-self: center;
@@ -76,7 +74,7 @@
       .angular-logo {
         width: 17px;
         height: 17px;
-        vertical-align: middle; /* Aligns the logo with the text */
+        vertical-align: middle;
         margin: 0 0.2rem;
       }
     }
@@ -115,7 +113,7 @@
     }
 
     .ruler {
-      width: 100%; // Expand the rule width on mobile
+      width: 100%;
       margin: 1rem auto;
     }
 
