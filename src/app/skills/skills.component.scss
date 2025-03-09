@@ -2,7 +2,7 @@
     background-color: #18181B;
     padding: 2rem;
     color: #ffffffe8;
-    // height: 100vh;
+    height: 220vh;
 
     h1 {
         text-align: center;
@@ -28,7 +28,7 @@
     }
 
     h4 {
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         text-align: center;
         font-size: 1.5rem;
     }
@@ -45,81 +45,98 @@
     justify-content: center;
     gap: 2rem; // space between the cards
     flex-wrap: wrap;
-}
-
-.work-card {
-    /* Card Container */
-    background-color: #242427; // Dark background
-    color: #fff; // White text
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    flex: 1 1 calc(50% - 2rem); // use a fixed base width for card
-    max-width: calc(45% - 2rem); // restrict card width to force wrapping
-
-    .date-range {
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        color: #b3b3b3;
-        margin-bottom: 0.25rem;
-    }
-
-    .job-title {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin: 0.5rem 0;
-        text-align: left;
-    }
-
-    .company-link {
-        display: inline-block;
-        margin-bottom: 1rem;
-        font-size: 0.95rem;
-        color: #ffffff;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    .skill-box {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.3rem; // Spacing between skill tags
-        margin-bottom: 1.2rem;
-
-        .skill {
-            padding: 0.25rem 0.75rem;
-            border: 1px solid #ffffff;
-            // border-radius: 4px;
-            font-size: 0.8rem;
-            color: #b3b3b3;
+    .work-card {
+        /* Card Container */
+        background-color: #18181B; // Dark background
+        color: #ffffffe8; // White text
+        padding: 1.5rem;
+        border-radius: 8px;
+        // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        flex: 1 1 calc(50% - 2rem); // use a fixed base width for card
+        max-width: calc(45% - 2rem); // restrict card width to force wrapping
+    
+        display: grid;
+        grid-template-columns: auto 1fr; 
+        grid-column-gap: 2rem; // spacing between columns
+        align-items: start;
+        .date-range {
+            font-size: 0.85rem;
             text-transform: uppercase;
-            /* Optional hover effect */
-            // &:hover {
-            //   background-color: #333;
-            //   border-color: #666;
-            //   cursor: default;
-            // }
+            color: #b3b3b3;
+            margin-bottom: 0.25rem;
         }
-    }
-
-    .description {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        margin-bottom: 1rem;
-        color: #d1d1d1;
-    }
-    &:hover {
-        // background: darken(#000000, 10%);
-        // transform: translateY(-3px); // Lifts button slightly
     
-        // Apply the gradient shadow effect
-        box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5), 
-                    0 -5px 20px rgba(46, 49, 146, 0.5);
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            // margin: 0.5rem 0;
+            text-align: left;
+        }
     
-        // Adding a subtle glow effect
-        filter: brightness(1.2);
-      }
+        .company-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: #e2e2e29f;
+            text-decoration: none;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    
+        .skill-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem; // Spacing between skill tags
+            margin-bottom: 1.2rem;
+    
+            .skill {
+                padding: 0.25rem 0.75rem;
+                border: 1px solid #e2e2e29f;
+                // border-radius: 4px;
+                font-size: 0.8rem;
+                color: #b3b3b3;
+                text-transform: uppercase;
+                /* Optional hover effect */
+                // &:hover {
+                //   background-color: #333;
+                //   border-color: #666;
+                //   cursor: default;
+                // }
+            }
+        }
+    
+        .description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 0.8rem;
+            color: #e2e2e29f;
+        }
+        &:hover {
+            // background-color: #242427;
+            // background: darken(#000000, 10%);
+            // transform: translateY(-3px); // Lifts button slightly
+        
+            // Apply the gradient shadow effect
+            animation: glow 2s ease-in-out infinite;
+            // box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5), 
+            //             0 -5px 20px rgba(46, 49, 146, 0.5);
+        
+            // Adding a subtle glow effect
+            filter: brightness(1.2);
+          }
+          @keyframes glow {
+            0%, 100% {
+              box-shadow: 0 5px 20px rgba(27, 255, 255, 0.5),
+                          0 -5px 20px rgba(46, 49, 146, 0.5);
+            }
+            50% {
+              box-shadow: 0 5px 20px rgba(27, 255, 255, 1),
+                          0 -5px 20px rgba(46, 49, 146, 1);
+            }
+          }
+    }
 }
+
+
