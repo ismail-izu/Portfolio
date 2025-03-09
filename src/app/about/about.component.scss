@@ -1,41 +1,58 @@
 .about {
-    /* Center everything horizontally */
-    text-align: center;
-    /* Background color for the whole section (optional) */
-    background-color: #18181B;
-    /* Spacing around the section */
-    padding: 50px 20px;
-    color: #CBD5E1;
-    height: 80vh;
-  }
-  
-  .about h1 {
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    color: #ffffffe8;
-    margin-top: 7rem;
+  /* Center everything horizontally */
+  text-align: center;
+  /* Background color for the whole section */
+  background-color: #18181B;
+  /* Spacing around the section */
+  padding: 50px 20px;
+  color: #CBD5E1;
+  height: 80vh;
+}
+
+.about h1 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #ffffffe8;
+  margin-top: 7rem;
+}
+
+.about-box {
+  /* Center the box */
+  margin: 0 auto;
+  /* Maximum width for readability */
+  max-width: 750px;
+  background-color: #18181B;
+  border-radius: 8px;
+  padding: 30px;
+  /* Left-align text inside the box */
+  text-align: left;
+}
+
+.about-box p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #e2e2e29f;
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 768px) {
+  .about {
+    padding: 30px 10px;
+    height: auto; /* Allow the height to adjust based on content */
   }
 
-  
+  .about h1 {
+    font-size: 2rem; /* Scale down the heading */
+    margin-top: 4rem; /* Reduce top margin */
+  }
+
   .about-box {
-    /* Center the box itself */
-    margin: 0 auto;
-    /* Restrict the maximum width of the box */
-    max-width: 750px;
-    /* If you want a fixed width (more “boxy”), use width: 600px */
-    
-    /* Give it a background, border, or box-shadow so it looks like a “box” */
-    background-color: #18181B;
-    border-radius: 8px;
-    padding: 30px;
-    // box-shadow: 0 4px 10px rgba(243, 1, 1, 0.1);
-    
-    /* Left-align the text inside the box */
-    text-align: left;
+    padding: 20px; /* Reduce padding inside the box */
+    max-width: 100%; /* Allow full width on small screens */
   }
-  
+
   .about-box p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    color: #e2e2e29f;
+    font-size: 0.9rem; /* Slightly smaller font size for paragraphs */
+    margin-bottom: 15px; /* Adjust spacing between paragraphs */
   }
+}
