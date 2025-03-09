@@ -15,7 +15,6 @@ import { ContactComponent } from "./contact/contact.component";
 })
 export class AppComponent implements AfterViewInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
-    // this.navigateToHome();
   }
   ngAfterViewInit() {
     this.activatedRoute.fragment.subscribe(fragment => {
