@@ -2,7 +2,7 @@
     background-color: #18181B;
     padding: 2rem;
     color: #ffffffe8;
-    height: 220vh;
+    height: 100%;
 
     h1 {
         text-align: center;
@@ -45,6 +45,7 @@
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    padding-bottom: 7rem;
 
     .work-card {
 
