@@ -12,19 +12,28 @@ export class HomeComponent {
   }
   onResumeClick(event: Event): void {
     event.preventDefault();
+
     this.geolocationService.getCountryDetails().subscribe({
       next: (response) => {
-        if (response.country === 'AE') {
-          window.open('https://ismail-profile.netlify.app/resumedubai', '_blank');
-        } else {
-          window.open('https://ismail-profile.netlify.app/resume', '_blank');
+        const url = response.country === 'AE'
+          ? 'https://ismail-profile.netlify.app/resumedubai'
+          : 'https://ismail-profile.netlify.app/resume';
+
+        const newWindow = window.open(url, '_blank');
+
+        if (!newWindow || newWindow.closed) {
+          window.location.href = url;
         }
       },
       error: () => {
-        window.open('https://ismail-profile.netlify.app/resume', '_blank');
+        const fallbackUrl = 'https://ismail-profile.netlify.app/resume';
+        const newWindow = window.open(fallbackUrl, '_blank');
+
+        if (!newWindow || newWindow.closed) {
+          window.location.href = fallbackUrl;
+        }
       }
     });
-
   }
 }
 
