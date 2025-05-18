@@ -14,32 +14,17 @@ export class HomeComponent {
     event.preventDefault();
     this.geolocationService.getCountryDetails().subscribe({
       next: (response) => {
-        if (response.country === 'AE') { // UAE
+        if (response.country === 'AE') {
           window.open('https://ismail-profile.netlify.app/resumedubai', '_blank');
-        } else { // Default (India)
+        } else {
           window.open('https://ismail-profile.netlify.app/resume', '_blank');
         }
       },
       error: () => {
-        // Fallback to Indian resume if detection fails
         window.open('https://ismail-profile.netlify.app/resume', '_blank');
       }
     });
 
-
-    // fetch('https://ipapi.co/json/')
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     const countryCode = data.country;
-    //     if (countryCode === 'AE') {
-    //       window.open('https://ismail-profile.netlify.app/resumedubai', '_blank');
-    //     } else {
-    //       window.open('https://ismail-profile.netlify.app/resume', '_blank');
-    //     }
-    //   })
-    //   .catch(() => {
-    //     window.open('https://ismail-profile.netlify.app/resume', '_blank');
-    //   });
   }
 }
 
